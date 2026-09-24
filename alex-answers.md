@@ -1,3 +1,5 @@
+# Alex - Internship Assessment 
+
 **Section 1**
 -
 
@@ -17,7 +19,7 @@
 - b) `DELETE FROM ... WHERE ...`
 
 **1.6** Which Git command **creates a new branch and switches to it**?
-- a) `git branch -d feature`
+- c) `git checkout -b feature`
 
 **1.7** Which of the following is **NOT** one of the core principles of Object-Oriented Programming?
 - d) Compilation
@@ -26,7 +28,7 @@
 - b) To uniquely identify each row
 
 **1.9** What is the **average** time complexity of looking up a key in a hash map / dictionary?
-- c) O(n)
+- a) O(1)
 
 **1.10** Which of the following is **valid JSON**?
 - c) `{"name": "Budi", "age": 21}`
@@ -56,6 +58,7 @@
 - I would first find out what device this user in partiuclar was using and at what conditions it was used during the bug, if possible a crash log report would be highly informative. With this log, it would be possible to perhaps recreate the conditions much closely. If this is still not reproducable and the bug is isolated to that one person, it could be a false positive. Eitherway, it would be wise to fix whatever is possible with the knowledge from that log to prevent any future issues with any future machines.
 
 **Section 3**
+-
 
 ### 3.1 — Predict the output (Python)
 
@@ -118,10 +121,17 @@ for (var i = 0; i < 3; i++) {
 ```
 
 a) What is logged to the console?
-- N/A
+- 3 3 3
 
 b) Change **one word** so that it logs `0 1 2`. Explain why it works.
-- N/A
+- the word var needs to be changed to let. Var's scope is global and i will always be 3, this effects callbacks and prints 3. Let fixes this as it is purely operates inside the blocks.
+
+```javascript
+for (let i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 0);
+}
+// Output: 0, 1, 2
+```
 
 ### 3.4 — Find the bug
 
